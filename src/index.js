@@ -3,25 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-
-// Apollo Setup
-import { ApolloProvider } from 'react-apollo';
-import { ApolloClient } from 'apollo-client';
-import { createHttpLink } from 'apollo-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-
-const httpLink = createHttpLink({
-    uri: 'http://localhost:4000'
-});
-
-const client = new ApolloClient({
-    link: httpLink,
-    cache: new InMemoryCache()
-});
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 ReactDOM.render(
-    <ApolloProvider client={client}>
+    <Router>
+       <Switch>
         <App />
-    </ApolloProvider>, 
+       </Switch> 
+    </Router>
+    , 
     document.getElementById('root'));
 registerServiceWorker();
