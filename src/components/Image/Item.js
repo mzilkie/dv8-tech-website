@@ -1,11 +1,11 @@
 import React from 'react';
 
-class ImageItem extends Component {
-    render() {
-        return(
-            <div>Image Item Component</div>
-        );
-    }
+import ImageDetails from './Details';
+
+class ImageItem extends React.Component {
+  render() {
+    return <ImageDetails />;
+  }
 }
 
 export default ImageItem;

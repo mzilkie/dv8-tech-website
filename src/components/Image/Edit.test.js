@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PriceDetails from './PriceDetails';
+import ImageEdit from './Edit';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<PriceDetails />, div);
+  ReactDOM.render(<ImageEdit />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

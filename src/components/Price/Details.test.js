@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ImageItems from './ImageList';
+import PriceDetails from './Details';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<ImageList />, div);
+  ReactDOM.render(<PriceDetails />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
